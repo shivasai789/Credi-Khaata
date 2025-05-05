@@ -1,0 +1,50 @@
+.page-cont{
+    display: flex;
+}
+
+.side-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(63, 63, 228);
+    color: white;
+    width: 50%;
+}
+
+.side-container img{
+    height: 80px;
+}
+
+.side-heading{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.signup-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+}
+
+.signup-heading{
+    font-size: 25px; 
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 968px) {
+    .side-container{
+        display: none;
+    }
+
+    .signup-container{
+        width: 100%;
+    }
+    
+}
