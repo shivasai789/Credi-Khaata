@@ -21,10 +21,10 @@ const App = () => {
       <Route path="/" element={<ProtectedRoute><Dashboard></Dashboard></ProtectedRoute>}></Route>
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path="/signup" element={<Signup></Signup>}></Route>
-      <Route path="/add-customer" element={<AddCustomerPage />} />
-      <Route path="/customer/:customerId" element={<CustomerDetails></CustomerDetails>}></Route>
-      <Route path="/customer/:customerId/add-loan" element={<AddLoanPage />} />
-      <Route path="/customer/:customerId/loan/:loanId/repayment" element={<AddRepaymentPage />} />
+      <Route path="/add-customer" element={<ProtectedRoute><AddCustomerPage /></ProtectedRoute>} />
+      <Route path="/customer/:customerId" element={<ProtectedRoute><CustomerDetails></CustomerDetails></ProtectedRoute>}></Route>
+      <Route path="/customer/:customerId/add-loan" element={<ProtectedRoute><AddLoanPage /></ProtectedRoute>} />
+      <Route path="/customer/:customerId/loan/:loanId/repayment" element={<ProtectedRoute><AddRepaymentPage /></ProtectedRoute>} />
       <Route path="*" element={<NotFound></NotFound>}></Route>
     </Routes>
   </>
